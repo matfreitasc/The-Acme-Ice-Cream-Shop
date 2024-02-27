@@ -119,8 +119,10 @@ app.delete('/api/flavors/:id', async (req, res, next) => {
 	}
 })
 // Show docs page as root
-
 app.use(express.static(path.join(__dirname, 'public')))
+app.get('/', (req, res, next) => {
+	res.sendFile(path.join(__dirname, 'index.html'))
+})
 
 // seed data and start server
 
