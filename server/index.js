@@ -38,6 +38,7 @@ app.get('/api/flavors', async (req, res, next) => {
  *  @apiSuccess {Boolean} is_favorite Flavor's favorite status.
  *  @apiSuccess {Date} created_at Flavor's creation date.
  *  @apiSuccess {Date} updated_at Flavor's last update date.
+ *  @apiError {String} error Error message.
  */
 app.get('/api/flavors/:id', async (req, res, next) => {
 	try {
